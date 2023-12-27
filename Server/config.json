@@ -1,0 +1,5 @@
+{
+    "game": {
+        "start_command": "./LocalAdmin 7777"
+    }
+}
