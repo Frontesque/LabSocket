@@ -6,10 +6,15 @@ const config = require('../config');
 //---   Global Variables   ---//
 let hook;
 
-//---   Functions   ---//
+//---   Processing Function   ---//
+function processGame() {
+    
+}
+
+//---   Core Functions   ---//
 function start() {
-    log(`Starting SCP Secret Laboratory: "${config.game.start_command}"`)
-    this.hook = spawn(config.game.start_command);
+    log(`Starting SCP Secret Laboratory...`)
+    this.hook = spawn(config.game.launch_file, config.game.launch_args);
     this.hook.stdout.pipe(process.stdout);
 }
 

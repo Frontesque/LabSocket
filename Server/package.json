@@ -4,7 +4,8 @@
   "description": "A JavaScript plugin loader for SCP:SL",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg src/index.js -t node18-linux -o LabLink"
   },
   "author": "Frontesque",
   "license": "ISC",

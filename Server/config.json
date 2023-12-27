@@ -1,5 +1,6 @@
 {
     "game": {
-        "start_command": "./LocalAdmin 7777"
+        "launch_file": "./LocalAdmin",
+        "launch_args": ["7777"]
     }
 }
