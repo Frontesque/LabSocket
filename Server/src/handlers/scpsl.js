@@ -2,20 +2,23 @@
 const spawn = require('child_process').spawn;
 const log = require('./log');
 const config = require('../config');
+const console_events = require('./console_events');
 
 //---   Global Variables   ---//
 let hook;
 
-//---   Processing Function   ---//
-function processGame() {
-    
+//---   Core Functions   ---//
+function send(data) {
+    hook.stdin.write(data);
 }
 
-//---   Core Functions   ---//
 function start() {
     log(`Starting SCP Secret Laboratory...`)
-    this.hook = spawn(config.game.launch_file, config.game.launch_args);
-    this.hook.stdout.pipe(process.stdout);
+    hook = spawn(config.game.launch_file, config.game.launch_args);
+    hook.stdout.on('data', data => console_events(data));
+    setTimeout(_ => {
+        send('help')
+    }, 20000);
 }
 
 //---   Exports   ---//
