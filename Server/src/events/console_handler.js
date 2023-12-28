@@ -1,6 +1,6 @@
 const events = [
-    require('../events/console/idle.js'),
-    require('../events/console/ready.js'),
+    require('./console/idle.js'),
+    require('./console/ready.js'),
 ]
 
 function removeTime(line) {

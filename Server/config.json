@@ -1,6 +1,10 @@
 {
+    "lablink": {
+        "debug": false
+    },
     "game": {
         "launch_file": "./LocalAdmin",
-        "launch_args": ["7777"]
+        "launch_args": ["7777"],
+        "log_directory": "~/.config/SCP Secret Laboratory/ServerLogs/7777/"
     }
 }

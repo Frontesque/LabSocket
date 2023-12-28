@@ -2,7 +2,6 @@
 const spawn = require('child_process').spawn;
 const log = require('./log');
 const config = require('../config');
-const console_events = require('./console_events');
 
 //---   Global Variables   ---//
 let hook;
@@ -15,7 +14,7 @@ function send(data) {
 function start() {
     log(`Starting SCP Secret Laboratory...`)
     hook = spawn(config.game.launch_file, config.game.launch_args);
-    hook.stdout.on('data', data => console_events(data));
+    hook.stdout.on('data', data => require('../events/console_handler.js')(data));
     setTimeout(_ => {
         send('help')
     }, 20000);
