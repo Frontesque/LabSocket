@@ -1,7 +1,7 @@
 const log = require('../../handlers/log');
 module.exports = {
-    match: "Server has entered the idle mode.",
+    match: "Waiting for players...",
     run(line) {
-        log("Server idling")
+        log("Server ready")
     }
 }

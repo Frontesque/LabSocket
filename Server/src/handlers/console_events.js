@@ -1,12 +1,21 @@
 const events = [
-    require('../events/console/idle.js')
+    require('../events/console/idle.js'),
+    require('../events/console/ready.js'),
 ]
+
+function removeTime(line) {
+    line = line.split("]");
+    line.shift();
+    return line.join().trim();
+}
 
 module.exports = (data) => {
     const line = data.toString().trim();
-    console.log("[SCPSL]".green, line);
+    console.log("[SCPSL]".green, removeTime(line));
 
     for (const i in events) {
-        events[i](line);
+        if (line.includes(events[i].match)) {
+            events[i].run(line);
+        }
     }
 }
