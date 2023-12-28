@@ -5,6 +5,6 @@
     "game": {
         "launch_file": "./LocalAdmin",
         "launch_args": ["7777"],
-        "log_directory": "~/.config/SCP Secret Laboratory/ServerLogs/7777/"
+        "log_directory": "/home/steam/.config/SCP Secret Laboratory/ServerLogs/7777/"
     }
 }

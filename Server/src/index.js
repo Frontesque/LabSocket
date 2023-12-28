@@ -7,4 +7,4 @@ require('./core/log')(['Starting LabLink Version', package.version]);
 
 //---   Start Lab Link   ---//
 require('./core/localadmin').start();
-require('./events/game_handler')();
+require('./core/roundlogs').start();
