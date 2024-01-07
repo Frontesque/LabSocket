@@ -8,3 +8,4 @@ require('./core/log')(['Starting LabHook Version', package.version]);
 //---   Start Lab Link   ---//
 require('./core/localadmin').start();
 require('./core/roundlogs').start();
+require('./core/websocket.js').start();

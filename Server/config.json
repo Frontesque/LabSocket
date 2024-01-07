@@ -1,5 +1,6 @@
 {
     "labhook": {
+        "websocket_port": "6777",
         "debug": false
     },
     "game": {

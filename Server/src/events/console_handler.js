@@ -6,6 +6,7 @@ const events = [
     require('./console/idle.js'),
     require('./console/ready.js'),
     require('./console/new_round.js'),
+    require('./console/player_join.js')
 ]
 
 function removeTime(line) {
