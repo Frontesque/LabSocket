@@ -3,7 +3,7 @@ require('colors');
 
 //---   Startup   ---//
 const package = require('../package.json');
-require('./core/log')(['Starting LabLink Version', package.version]);
+require('./core/log')(['Starting LabHook Version', package.version]);
 
 //---   Start Lab Link   ---//
 require('./core/localadmin').start();

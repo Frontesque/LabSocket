@@ -1,4 +1,4 @@
-const prefix = "[LabLink] ".magenta;
+const prefix = "[LabHook] ".magenta;
 module.exports = (output) => {
     switch (typeof output) {
         case ('string'):
