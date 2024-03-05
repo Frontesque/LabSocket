@@ -10,7 +10,7 @@ let clients = new Array();
 
 //---   Run Socket   ---//
 function start() {
-  const wss = new WebSocketServer({ port: config.labhook.websocket_port });
+  const wss = new WebSocketServer({ port: config.labsocket.websocket_port });
   wss.on('connection', function connection(ws) {
     clients.push(ws);
     log("New Client");

@@ -1,5 +1,5 @@
 {
-    "labhook": {
+    "labsocket": {
         "websocket_port": "6777",
         "debug": false
     },
