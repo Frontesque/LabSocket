@@ -1,7 +1,7 @@
 {
-  "name": "lab-link",
+  "name": "labsocket",
   "version": "0.1.0",
-  "description": "A JavaScript plugin loader for SCP:SL",
+  "description": "A JavaScript plugin loader for SCP:SL using websockets",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
