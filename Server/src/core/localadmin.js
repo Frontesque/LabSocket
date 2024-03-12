@@ -13,8 +13,8 @@ function send(data) {
 }
 
 function start() {
-    log(`Starting SCP Secret Laboratory...`)
-    hook = spawn(config.game.launch_file, config.game.launch_args);
+    log(`Starting SCP Secret Laboratory...`);
+    hook = spawn(config.game.launch_file, config.game.launch_args, { cwd: config.game.working_directory });
     hook.stdout.on('data', data => require('../events/console_handler.js')(data));
     hook.stdin.setEncoding('utf-8');
 }
