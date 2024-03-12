@@ -2,6 +2,9 @@ const tiggerEvent = require('../core/trigger_event.js');
 
 const events = [
     require('./game/death.js'),
+    require('./game/kill.js'),
+    require('./game/teamkill.js'),
+    require('./game/respawn.js')
 ]
 
 function removeCategories(data) {

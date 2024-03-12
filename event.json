@@ -1,0 +1,17 @@
+{
+    "reason": "Killed by SCP-939 (Front) with Claw.",
+    "victim": {
+        "player": {
+            "name": "Quirkleton Fizzlewhiz",
+            "id": "76561198180318705@steam)"
+        },
+        "class": "Class-D Personnel"
+    },
+    "killer": {
+        "player": {
+            "name": "Front",
+            "id": "front@northwood)"
+        },
+        "class": "SCP-939"
+    }
+}

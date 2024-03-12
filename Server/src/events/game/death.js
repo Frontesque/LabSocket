@@ -1,9 +1,9 @@
-const log = require('../../core/log');
+const player = require('../../core/player');
 module.exports = {
     match: "has died.",
     run(line) {
         const data = {
-            user: line.split(',')[0].trim(),
+            player: player(line.split(',')[0].trim()),
             class: line.split(',')[1].split('playing as')[1].trim(),
             reason: line.split('Specific death reason:')[1].split('.')[0].trim()
         };
