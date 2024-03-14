@@ -14,7 +14,7 @@ function start() {
   wss.on('connection', function connection(ws) {
     clients.push(ws);
     log("New Client");
-    ws.send(JSON.stringify({ type: "Welcome", data: `Connected to LabLink ${package.version}` }));
+    ws.send(JSON.stringify({ type: "welcome", data: `Connected to LabLink ${package.version}` }));
     ws.on('error', console.error);
     ws.on('message', function message(data) {
       log(['[WebSocket]'.cyan, data]);
