@@ -3,7 +3,7 @@ require('colors');
 
 //---   Startup   ---//
 const package = require('../package.json');
-require('./core/log')(['Starting LabSocket Version', package.version]);
+require('./core/log')(['Starting LabSocket '.cyan, package.version.yellow]);
 
 //---   Start Lab Link   ---//
 require('./core/localadmin').start();
