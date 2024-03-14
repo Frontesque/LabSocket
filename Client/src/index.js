@@ -1,7 +1,7 @@
 const { WebSocket } = require('ws');
 const ws = new WebSocket('ws://localhost:6777');
 ws.on('error', console.error);
-ws.on('open', _ => ws.send(JSON.stringify({ type: "Connection", content: "New Connection" })));
+ws.on('open', _ => ws.send(JSON.stringify({ type: "connect", content: "New Connection" })));
 ws.on('message', data => {
     const message = JSON.parse(data.toString());
     

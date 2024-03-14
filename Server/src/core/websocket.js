@@ -12,11 +12,15 @@ let clients = new Array();
 function start() {
   const wss = new WebSocketServer({ port: config.labsocket.websocket_port });
   wss.on('connection', function connection(ws) {
+    //---   Handle Clients In Global Pool   ---//
     clients.push(ws);
-    log("New Client");
+    ws.on('close', data => { clients.splice(clients.indexOf(ws), 1); });
+    //---   Client Welcome Message   ---//
     ws.send(JSON.stringify({ type: "plugin_connect", data: `Connected to LabLink ${package.version}` }));
+    //---   Error Handling   ---//
     ws.on('error', console.error);
-    ws.on('message', function message(data) {
+    //---   Client Message Handling   ---//
+    ws.on('message', data => {
       log(['[WebSocket]'.cyan, data]);
       const parsedData = JSON.parse(data.toString());
       if (parsedData.type === 'run') {
