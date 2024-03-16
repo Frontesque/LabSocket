@@ -1,6 +1,6 @@
 {
   "name": "labsocket",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A JavaScript plugin loader for SCP:SL using websockets",
   "main": "src/index.js",
   "scripts": {
