@@ -16,7 +16,7 @@ function start() {
     clients.push(ws);
     ws.on('close', data => { clients.splice(clients.indexOf(ws), 1); });
     //---   Client Welcome Message   ---//
-    ws.send(JSON.stringify({ type: "plugin_connect", data: `Connected to LabLink ${package.version}` }));
+    ws.send(JSON.stringify({ type: "plugin_connect", data: `Connected to LabSocket ${package.version}` }));
     //---   Error Handling   ---//
     ws.on('error', console.error);
     //---   Client Message Handling   ---//
