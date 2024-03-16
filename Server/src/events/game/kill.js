@@ -5,12 +5,12 @@ module.exports = {
         const data = {
             reason: line.split("Specific death reason:")[1].trim(),
             victim: {
-                player: player(line.split(',')[0].trim()),
-                class: line.split(',')[1].split('playing as')[1].trim(),
+                player: player(line.split(', playing as ')[0].trim()),
+                class: line.split(', playing as ')[1].split(',')[0].trim(),
             },
             killer: {
-                player: player(line.split(',')[2].split('has been killed by')[1].split('playing as')[0].trim()),
-                class: line.split(',')[2].split('playing as:')[1].split('.')[0].trim()
+                player: player(line.split('has been killed by')[1].split('playing as: ')[0].trim()),
+                class: line.split('playing as: ')[1].split('.')[0].trim()
             }
         };
         return { name: 'kill', context: data };

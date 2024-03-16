@@ -16,7 +16,7 @@ function reverse(str) {
 module.exports = (player_string) => {
     const data = {
         name: reverse(reverse(player_string).split('(')[1].trim()),
-        id:   reverse(reverse(player_string).split('(')[0].trim()),
+        id:   reverse(reverse(player_string).split('(')[0].replace(/[{()}]/g, '').trim()),
     }
     return data;
 }

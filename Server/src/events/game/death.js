@@ -3,8 +3,8 @@ module.exports = {
     match: "has died.",
     run(line) {
         const data = {
-            player: player(line.split(',')[0].trim()),
-            class: line.split(',')[1].split('playing as')[1].trim(),
+            player: player(line.split(', playing as')[0].trim()),
+            class: line.split(', playing as')[1].split(',')[0].trim(),
             reason: line.split('Specific death reason:')[1].split('.')[0].trim()
         };
         return { name: 'death', context: data };
