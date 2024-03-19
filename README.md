@@ -6,7 +6,7 @@ An event-based supervisor for SCP: Secret Laboratory (SCP:SL) using websockets
 LabSocket is still under development. Not all log events trigger a LabSocket event yet!
 
 ## Why?
-I am the Systems Administrator for the SCP:SL server [The Pentagon](https://pentagonscp.us). We value a Vanilla experience, so we are unwilling to use any plugin loaders. Because of thise, we are unable to interact with the game server in any way. As our solution, I've developed LabSocket. It allows basic interaction over websockets, as an event based trigger system. You are also able to programatically interact with the server by running LocalAdmin commands.
+I am the Systems Administrator for the SCP:SL server [The Pentagon](https://pentagonscp.us). We value a Vanilla experience, so we are unwilling to use any plugin loaders. Because of this, we are unable to interact with the game server in any way. As our solution, I've developed LabSocket. It allows basic interaction over websockets, as an event based trigger system. You are also able to programatically interact with the server by running LocalAdmin commands.
 
 ## Benefits
 - Clients can be written in any programming language that supports networking & websockets (not just C++)
