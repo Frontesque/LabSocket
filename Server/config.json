@@ -1,6 +1,7 @@
 {
     "labsocket": {
-        "websocket_port": "6777"
+        "websocket_port": "6777",
+        "plugins": "/home/front/Documents/projects/labsocket/Server/Plugins"
     },
     "game": {
         "working_directory": "/home/front/Steam/steamapps/common/SCP Secret Laboratory Dedicated Server/",

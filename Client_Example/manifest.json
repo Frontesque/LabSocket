@@ -1,0 +1,8 @@
+{
+    "name": "Example",
+    "version": "0.2.0",
+    "start": {
+        "command": "node",
+        "args": ["index.js"]
+    }
+}
