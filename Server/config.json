@@ -1,4 +1,5 @@
 {
+    "runAsService": true,
     "labsocket": {
         "websocket_port": "6777",
         "plugins": "/home/front/Documents/projects/labsocket/Server/Plugins"

@@ -11,5 +11,6 @@ async function main() {
     require('./core/localadmin').start();
     require('./core/roundlogs').start();
     require('./core/websocket.js').start();
+    require('./core/systemd.js')();
 }
 main();
